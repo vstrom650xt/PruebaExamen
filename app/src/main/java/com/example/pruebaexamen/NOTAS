@@ -1,0 +1,13 @@
+El Bundle se utiliza principalmente para pasar datos entre diferentes ACTIVIDADES,
+//ENVIAR
+Bundle bundle = new Bundle();
+bundle.putString("key", "value");
+bundle.putInt("count", 5);
+bundle.putBoolean("isSuccess", true);
+
+
+//RECIBIR
+Bundle bundle = getIntent().getExtras();
+String value = bundle.getString("key");
+int count = bundle.getInt("count");
+boolean isSuccess = bundle.getBoolean("isSuccess")
