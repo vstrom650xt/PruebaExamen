@@ -1,13 +1,9 @@
-El Bundle se utiliza principalmente para pasar datos entre diferentes ACTIVIDADES,
-//ENVIAR
-Bundle bundle = new Bundle();
-bundle.putString("key", "value");
-bundle.putInt("count", 5);
-bundle.putBoolean("isSuccess", true);
+preparar vuelta con   ActivityResultLauncher<Intent> someActivityResultLauncher
+
+enviar datos con el intent asi abres la nueva actividad  y envias la info con el someActivityResultLauncher
+
+e nla seconactivity  recoges la info con el         Bundle bundle = getIntent().getExtras();
+ y la metes con         textView2.setText(bundle.getSerializable("texto").toString());
 
 
-//RECIBIR
-Bundle bundle = getIntent().getExtras();
-String value = bundle.getString("key");
-int count = bundle.getInt("count");
-boolean isSuccess = bundle.getBoolean("isSuccess")
+para el boton de la vuelta /MUY IMPORTANTEEEEEEEEEEEEEEEEEE  setResult(RESULT_OK,i);
